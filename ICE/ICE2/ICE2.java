@@ -1,3 +1,10 @@
+/*
+Name: Marcus Landry
+Program: COSC1200
+Date: 06/13/2024
+Description: ICE2 - practice using functions
+*/
+
 package ICE.ICE2;
 
 public class ICE2 {
