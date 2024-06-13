@@ -1,4 +1,4 @@
-/*
+package Assignments.Assignment1;/*
 Name: Marcus Landry
 Program: Assignment 1 - Fundamentals
 Date: 05/30/2024
