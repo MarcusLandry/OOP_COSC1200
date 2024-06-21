@@ -14,8 +14,19 @@ public class Assignment2 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the number of days (1 - 31): ");
-        int totalDays = scanner.nextInt();
+        int totalDays = 0;
+        boolean validDaysInput = false;
+
+        while (!validDaysInput) {
+            System.out.println("Enter the number of days (1 - 31): ");
+            totalDays = scanner.nextInt();
+
+            if (totalDays >= 1 && totalDays <= 31) {
+                validDaysInput = true;
+            } else {
+                System.out.println("Please enter a number of days between 1 - 31.");
+            }
+        }
 
         // initializing all the variables and arrays
         double[] lowTemperature = new double[totalDays];
@@ -26,7 +37,7 @@ public class Assignment2 {
         int overallLowestTempDay = 0;
         int overallHighestTempDay = 0;
 
-        // User input for temps
+            // User input for temps
         for (int day = 0; day < totalDays; day++) {
             boolean validInput = false;
             while (!validInput) {
@@ -41,8 +52,8 @@ public class Assignment2 {
                     highTemperature[day] = highTemp;
                     validInput = true;
                 } else {
-                    System.out.println("Invalid input. Please enter a number between -30 and 30 \n" +
-                            "for both temperatures, and ensure low temperature is not higher than high temperature.");
+                    System.out.println("Please enter a number between -30 and 30 for both temperatures,\n" +
+                            "and ensure low temperature is not higher than high temperature.");
                 }
 
             }
