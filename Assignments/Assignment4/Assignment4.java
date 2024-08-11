@@ -24,9 +24,78 @@ class Product {
         this.specialInstructions = "";
     }
 
+    // Parameter constructor
+    public Product (int sku, String name, double unitCost, int unitsOnHand, int unitsNeeded, String specialInstructions) {
+        this.sku = sku;
+        this.name = name;
+        this.unitCost = unitCost;
+        this.unitsOnHand = unitsOnHand;
+        this.unitsNeeded = unitsNeeded;
+        this.specialInstructions = specialInstructions;
+    }
 
+    // Getters and Setters
+    public int getSku() {
+        return sku;
+    }
+
+    public void setSku(int sku) {
+        this.sku = sku;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getUnitCost() {
+        return unitCost;
+    }
+
+    public void setUnitCost(double unitCost) {
+        this.unitCost = unitCost;
+    }
+
+    public int getUnitsOnHand() {
+        return unitsOnHand;
+    }
+
+    public void setUnitsOnHand(int unitsOnHand) {
+        this.unitsOnHand = unitsOnHand;
+    }
+
+    public int getUnitsNeeded() {
+        return unitsNeeded;
+    }
+
+    public void setUnitsNeeded(int unitsNeeded) {
+        this.unitsNeeded = unitsNeeded;
+    }
+
+    public String getSpecialInstructions() {
+        return specialInstructions;
+    }
+
+    public void setSpecialInstructions(String specialInstructions) {
+        this.specialInstructions = specialInstructions;
+    }
+
+    public void display() {
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println("SKU: " + sku);
+        System.out.println("Product Name: " + name);
+        System.out.println("Unit Cost: $" + df.format(unitCost));
+        System.out.println("Unit On Hand: " + unitsOnHand);
+        System.out.println("Unit Needed: " + unitsNeeded);
+        System.out.println("Special Instructions: " + specialInstructions);
+    }
 
 }
+
+
 
 public class Assignment4 {
 
