@@ -83,6 +83,7 @@ class Product {
         this.specialInstructions = specialInstructions;
     }
 
+    // Displays product details
     public void display() {
         DecimalFormat df = new DecimalFormat("0.00");
         System.out.println("SKU: " + sku);
@@ -95,7 +96,26 @@ class Product {
 
 }
 
+// Sub-class of the Product class
+class PerishableProduct extends Product {
+    private Date expiryDate;
 
+    // default constructor for perishables
+    public PerishableProduct() {
+        super();
+        this.expiryDate = new Date();
+    }
+
+    // Parameter constructor
+    public PerishableProduct(int sku, String name, double unitCost, int unitsOnHand, int unitsNeeded, String specialInstructions) {
+        super(sku, name, unitCost, unitsOnHand, unitsNeeded, specialInstructions);
+        this.expiryDate = new Date();
+    }
+
+    // Setters and Getters
+
+
+}
 
 public class Assignment4 {
 
