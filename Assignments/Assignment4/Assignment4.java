@@ -113,13 +113,26 @@ class PerishableProduct extends Product {
     }
 
     // Setters and Getters
+    public Date getExpiryDate() {
+        return expiryDate;
+    }
 
+    public void setExpiryDate(Date expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public void display() {
+        super.display();
+        System.out.println("Expiry Date: " + expiryDate.toString());
+    }
 
 }
 
 public class Assignment4 {
 
     public static void main(String[] args) {
+
+        Product product1 = new Product();
 
     }
 
