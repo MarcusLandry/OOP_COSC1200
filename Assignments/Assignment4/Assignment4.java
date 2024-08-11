@@ -127,12 +127,37 @@ class PerishableProduct extends Product {
     }
 
 }
-
+// Main class - Runs the Program
 public class Assignment4 {
 
     public static void main(String[] args) {
 
-        Product product1 = new Product();
+        // Creating Products
+        Product product1 = new Product(1234, "Cheerios", 11.99, 30, 70, "Happy Healthy Breakfast");
+        Product product2 = new Product(1679, "Muskoka Chair", 249.99, 8, 10, "Heavy Item");
+        Product product3 = new Product(1436, "PlayStation Game Console", 899.99, 16, 25, "Handle With Care");
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date expiryDate1 = parseDate("2024-09-17", dateFormat);
+        Date expiryDate2 = parseDate("2024-08-22", dateFormat);
+
+        PerishableProduct perishableProduct1 = new PerishableProduct(4237, "Banana", 1.49, 80, 100, "Store Suspended in Air");
+        PerishableProduct perishableProduct2 = new PerishableProduct(4032, "Tomatoes", 2.99, 230, 400, "Store Stem Side Down");
+
+        // Array list to store products
+        List<Product> products = new ArrayList<>();
+        products.add(product1);
+        products.add(product2);
+        products.add(product3);
+        products.add(perishableProduct1);
+        products.add(perishableProduct2);
+
+        // Display product details
+        for (Product product : products) {
+            System.out.println("\nProduct Details: ");
+            product.display();
+            System.out.println();
+        }
 
     }
 
