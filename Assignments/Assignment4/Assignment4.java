@@ -161,4 +161,13 @@ public class Assignment4 {
 
     }
 
+    private static Date parseDate(String dateString, SimpleDateFormat dateFormat) {
+        try {
+            return dateFormat.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }
